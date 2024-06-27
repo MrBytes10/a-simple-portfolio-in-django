@@ -1,0 +1,15 @@
+<!--link this to the main.css file through the STATIC_URL in settings-->
+
+{% load static %}
+
+<link
+  href="{% static '/css_files/main.css' %}"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<!-- static  means we'll start the serch for the file to link to in the static folder -->
+
+<h3>Hello Augastine</h3>
+<img src="{% static 'images/bitcoinpred.png' %} " />
+<!-- then let settings.py know about images -->
