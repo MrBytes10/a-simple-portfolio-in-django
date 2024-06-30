@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("baseApp.urls")), # this will include all urls from the App that we specify
     # Blank quotes mean the default page.
+    path("__debug__/", include("debug_toolbar.urls")),
 ]

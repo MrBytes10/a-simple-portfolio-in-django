@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     
     # adding our necessary apps
     "baseApp",
+        # ...
+    "debug_toolbar",
+    # ...
 ]
 
 MIDDLEWARE = [
@@ -50,6 +53,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        # ...
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # ...
+
 ]
 
 ROOT_URLCONF = 'my_website.urls'
@@ -65,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },
@@ -118,10 +126,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/staticFiles/'
-MEDIA_URL= "/images/"
+STATIC_URL = "staticfiles/"
+MEDIA_URL= '/images/'
 STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, "staticFiles")
+    os.path.join(BASE_DIR, 'staticfiles')
     ]
 
 
@@ -129,3 +137,9 @@ STATICFILES_DIRS= [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
