@@ -1,5 +1,7 @@
 # A Simple Personal Website in Django
 
+![alt text](djangoPort1.jpg)
+
 ## Overview
 
 This project is a basic portfolio website built using Django. It allows one to showcase their work, skills, and contact information in an elegant and customizable format.
