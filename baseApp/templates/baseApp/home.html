@@ -1,15 +1,177 @@
+{% load static %} <!--always load a template this way first-->
+
 <!--link this to the main.css file through the STATIC_URL in settings-->
+<!-- static  means we'll start the search for the file to link to in the static folder , in my case i named it staticfiles-->
+<!--   <h3>Hello Augastine</h3>
+  <img src="{% static 'images/bitcoinpred.png' %} " />
+  And then let settings.py know about images -->
+<!DOCTYPE html>
+<html lang="en">
 
-{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mulu.bytes@gmail.com</title>
+  <link href="{% static '/css_files/main.css' %}" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/8a6f673640.js" crossorigin="anonymous"></script>
 
-<link
-  href="{% static '/css_files/main.css' %}"
-  rel="stylesheet"
-  type="text/css"
-/>
+</head>
 
-<!-- static  means we'll start the serch for the file to link to in the static folder -->
+<body>
+  <p></p>
+  <div class="container"> <!-- this will help us center everything-->
+    <div class="row">
+      <!-- first row with 2 columns-->
+      <div class="col-md-3"> <!--this gives us a grid/table-like figure-->
+        <div class="card card-body h-100 border-info" id="profile-wrapper"> <!--info is a bootstrap command for color-->
+          <img id="profice-pic" src="{% static 'images/circleDP.png' %} ">
+          <hr>
+          <h4>Hi, I am Augastine</h4>
+          <p>I love coding, doing research and collaborating</p>
+        </div>
+      </div>
 
-<h3>Hello Augastine</h3>
-<img src="{% static 'images/bitcoinpred.png' %} " />
-<!-- then let settings.py know about images -->
+      <div class="col-md-9"> <!-- bootstrap has 12 segments, so 3 plus 9 will give us a short and another long column-->
+        <div class="card card-body h-100 border-info">
+          <h4>My Skills/Services</h4>
+          <p>
+          <h5>Web Development:</h5>
+          <p>
+          <ul>
+            <li>Proficient in Python (Django), JavaScript (React.js & Next.js), SQL, RESTful APIs, HTML, CSS, Bootstrap.
+            </li>
+            <li>
+              Experienced in designing and developing scalable web applications.</li>
+          </ul>
+          </p>
+
+
+          <h5>Data Science:</h5>
+          <p>
+          <ul>
+            <li>Skilled in Python, SQL, statistical modeling, web scraping, data mining, and data visualization.
+            </li>
+            <li>Expertise in extracting meaningful and actionable insights from complex datasets.</li>
+          </ul>
+          </p>
+
+          <h5>Business Development:</h5>
+          <p>
+          <ul>
+            <li>Experienced in driving sales growth, process improvement, and customer satisfaction.
+            </li>
+            <li>Proficient in CRM tools, strategic planning, project management, market research, and lead generation.
+            </li>
+          </ul>
+          </p>
+
+          <h5>Technical Writing:</h5>
+          <p>
+          <ul>
+            <li>Proficient in writing diverse content including essays, case studies, articles, blog posts,
+              dissertations,reports, and research papers.</li>
+          </ul>
+          </p>
+
+          <ul class="social-links">
+            <p class="connectWithMe">My Social Media links:</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/augastine-ndeti-290230175?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BwZ6ut2hySHGJYPyJsjdf2A%3D%3D"
+                target="blank">
+                <i class="fa-brands fa-linkedin"></i> </a>
+              <a href="https://twitter.com/AugastineNdeti" target="blank"><i
+                  class="fa-brands fa-square-x-twitter"></i></a>
+              <a href="https://www.facebook.com/augastine.mulu.ndeti/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/ndetiaugastino/" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/Birkofniki" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+              <a href="https://discordapp.com/users/961452033288843284" target="_blank"><i
+                  class="fa-brands fa-discord"></i> </a>
+              <a href="https://www.tiktok.com/@mr.bytes10?is_from_webapp=1&sender_device=pc" target="_blank"><i
+                  class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+      </div>
+
+
+      <p></p>
+      <!--another row with 2 columns-->
+      <div class="col-md-6"> <!--this gives us a grid/table-like figure-->
+        <div class="card card-body h-100">
+          <h4>My Experience as a Developer So Far</h4>
+          <hr>
+          <p>
+            Throughout my career, I've immersed myself in full-stack development, specializing in Python and JavaScript
+            frameworks such as Django, React.js, and Next.js. I've successfully led teams in delivering robust web
+            applications, leveraging my expertise in SQL, RESTful APIs, and modern frontend technologies to create
+            intuitive user experiences. My experience extends to optimizing application performance and scalability,
+            ensuring seamless functionality across platforms. I thrive in dynamic environments where innovation and
+            problem-solving are at the forefront, continually refining my skills to stay at the cutting edge of
+            technology.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-body h-100">
+          <h4>How I Learn:</h4>
+          <hr>
+          <p>
+            I approach learning with a hands-on, collaborative mindset, embracing both structured courses and practical
+            experimentation to deepen my understanding. By engaging with industry peers, attending workshops, and
+            contributing to open-source projects, I continuously expand my knowledge base. I thrive on challenges that
+            require innovative solutions, leveraging feedback and iteration to refine my skills. This iterative learning
+            process not only enhances my technical proficiency but also strengthens my ability to adapt swiftly to
+            evolving industry trends and technological advancements.
+          </p>
+        </div>
+      </div>
+      <!--second row ends here-->
+
+      <p></p> <!--To create space between the rows-->
+
+      <!--row 3 starts here-->
+      <div class="col-md-6"> <!--this gives us a grid/table-like figure-->
+        <div class="card card-body h-100">
+          <h4>What I Know</h4>
+          <hr>
+          <p>
+            I possess a comprehensive skill set encompassing web development, data science, business development, and
+            technical writing. In web development, I excel in backend technologies like Python and Django, alongside
+            frontend frameworks such as React.js and Next.js. My proficiency extends to database management with SQL,
+            API integration, and responsive design using HTML, CSS, and Bootstrap. In data science, I am adept at
+            statistical modeling, data visualization, and extracting insights through web scraping and data mining
+            techniques. Additionally, my business development acumen spans strategic planning, CRM tools, project
+            management, market research, and client relationship management. As a versatile technical writer, I craft
+            compelling content across various formats, including essays, case studies, articles, and research papers,
+            showcasing my ability to communicate complex ideas effectively.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6"> <!-- bootstrap has 12 segments, so 3 plus 9 will give us a short and another long column-->
+        <div class="card card-body h-100">
+          <h4>My Short-Term and Long-Term Goals</h4>
+          <hr>
+          <p>
+          <p>In the short term, I seek opportunities to contribute meaningfully to innovative
+            projects that push the boundaries of technology in software development.
+            Concurrently, I aim to deepen my knowledge in machine learning and artificial intelligence within the
+            context of data science, applying these insights to enhance predictive modeling and data-driven
+            decision-making processes. </p>
+          <p>Looking ahead, my long-term goal is
+            to assume a leadership role where I can foster innovation, mentor emerging talent, and drive strategic
+            initiatives that have a transformative impact on business outcomes.</p>
+
+          </p>
+        </div>
+      </div>
+      <!--3rd row ends here-->
+      <p></p>
+    </div>
+  </div>
+
+</body>
+
+</html>

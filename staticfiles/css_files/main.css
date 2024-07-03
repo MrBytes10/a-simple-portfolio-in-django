@@ -1,3 +1,19 @@
-h3{
-    color:rgb(219, 28, 28);
+body{
+    background-color: #9bdcd7!important;
+}
+
+#profile-wrapper{
+    text-align: center;
+}
+
+#profile-pic{
+    width: 150x;
+    height:150x;
+    border-radius: 50;
+    margin-left: auto;
+    margin-right: auto;
+}
+.social-icons {
+width:120px;
+height: 90px;
 }
