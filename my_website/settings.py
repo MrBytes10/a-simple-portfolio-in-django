@@ -134,7 +134,7 @@ STATICFILES_DIRS= [
     os.path.join(BASE_DIR, 'staticfiles')
     ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #Added by Railway for deployment # Run the command: py manage.py collectstatic to collect static files.
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #Added by Railway for deployment # Run the command: py manage.py collectstatic to collect static files.
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
